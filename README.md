@@ -13,7 +13,7 @@ Session myServerSession;
 ChannelSftp channelSftp;
 
 jsch = new JSch();
-byte[] privateKey = Files.readAllBytes("public_key_path");
+byte[] privateKey = Files.readAllBytes("private_key_path");
 jsch.addIdentity("", privateKey, null, null);
 
 proxyServerSession = jsch.getSession("proxy_username", "proxyServer_hostname", 3001);
